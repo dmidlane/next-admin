@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../img/logo.png";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import ThemeToggle  from "./ThemeToggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,6 +18,9 @@ const Navbar = () => {
       <Link href="/">
         <Image src={logo} alt="Next Admin" width={40}></Image>
       </Link>
+
+      <div className="flex items-center">
+      <ThemeToggle />
 
       <DropdownMenu>
         <DropdownMenuTrigger className='focus:outline-none'>
@@ -36,6 +40,7 @@ const Navbar = () => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+      </div>
     </div>
   );
 };
